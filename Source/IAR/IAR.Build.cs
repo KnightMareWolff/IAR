@@ -1,6 +1,10 @@
+// -------------------------------------------------------------------------------
 // Copyright 2025 William Wolff. All Rights Reserved.
-// This code is property of Williäm Wolff and protected by copyright law.
-// Prohibited copy or distribution without expressed authorization of the Author.
+// This code is property of William Wolff and protected by copywright law.
+// Proibited copy or distribution without expressed authorization of the Author.
+// Creation: 05/08/2025
+// Author  : William Wolff
+// -------------------------------------------------------------------------------
 
 using System.IO;
 using UnrealBuildTool;
@@ -77,8 +81,6 @@ public class IAR : ModuleRules
             });
 
             PublicDependencyModuleNames.Add("MIDIDevice");
-
-            //AddEngineThirdPartyPrivateStaticDependencies(Target, "portmidi");
         }
 
         //OpenCV Definitions
@@ -121,110 +123,10 @@ public class IAR : ModuleRules
             // OpenGL ou Metal RHI para Mac, dependendo da versão do UE e necessidades.
             // PrivateDependencyModuleNames.Add("MetalRHI");
         }
+
         // Configurações para Thread-Safety e Multiplataforma
         // Desativar Unity Builds para facilitar a depuração de arquivos individuais no início
         //bUseUnity = false;
 
-        // Habilita as características de Thread-Safety e Lock-Free
-        // As estruturas do Unreal (FThreadSafeBool, TQueue, FEvent) já são thread-safe.
-        // Para std::atomic, garantir includes diretos nas classes (.h).
-
-        // Bibliotecas de Terceiros (ex: FFmpeg, RtMidi, DSP libs)
-        // Esta seção será expandida conforme as dependências externas forem integradas.
-        // As implementações das funções Load* abaixo são apenas exemplos e precisam ser adaptadas
-        // para sua distribuição específica das bibliotecas.
-
-        // Exemplo de como carregar FFmpeg (se for linkar estaticamente ou precisar dos headers)
-        // LoadFFmpeg(Target);
-        // Exemplo de como carregar RtMidi (para MIDI I/O)
-        // LoadRtMidi(Target);
-        // Exemplo de como carregar uma biblioteca DSP (e.g., para FFT ou processamento de áudio)
-        // LoadDSPFramework(Target);
     }
-
-    /*
-    // Funções de exemplo para carregar bibliotecas de terceiros (descomente e adapte conforme necessário)
-    private bool LoadFFmpeg(ReadOnlyTargetRules Target)
-    {
-        // Exemplo de estrutura de diretório para FFmpeg dentro do seu plugin:
-        // [PluginRoot]/ThirdParty/FFmpeg/
-        //                       /include/ (headers)
-        //                       /lib/Win64/ (arquivos .lib)
-        //                       /bin/Win64/ (arquivos .dll ou executáveis)
-
-        string FFmpegPath = Path.Combine(PluginDirectory, "ThirdParty", "FFmpeg");
-        if (!Directory.Exists(FFmpegPath))
-        {
-            Log.TraceInformation("FFmpeg not found at: " + FFmpegPath);
-            return false;
-        }
-
-        string LibPath = "";
-        string BinPath = "";
-        string IncludePath = Path.Combine(FFmpegPath, "include");
-
-        PublicIncludePaths.Add(IncludePath);
-
-        if (Target.Platform == UnrealTargetPlatform.Win64)
-        {
-            LibPath = Path.Combine(FFmpegPath, "lib", "Win64");
-            BinPath = Path.Combine(FFmpegPath, "bin", "Win64"); // Para DLLs ou executáveis
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "avcodec.lib")); 
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "avformat.lib"));
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "avutil.lib"));
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "swresample.lib"));
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "swscale.lib"));
-            
-            // Para DLLs, adicione-as às RuntimeDependencies e PublicDelayLoadDLLs
-            PublicDelayLoadDLLs.Add("avcodec.dll");
-            RuntimeDependencies.Add(Path.Combine(BinPath, "avcodec.dll"));
-            // Repita para avformat, avutil, etc.
-        }
-        else if (Target.Platform == UnrealTargetPlatform.Linux)
-        {
-            LibPath = Path.Combine(FFmpegPath, "lib", "Linux");
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "libavcodec.so"));
-            // ...
-        }
-        else if (Target.Platform == UnrealTargetPlatform.Mac)
-        {
-            LibPath = Path.Combine(FFmpegPath, "lib", "Mac");
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "libavcodec.dylib"));
-            // ...
-        }
-        return true;
-    }
-
-    private bool LoadRtMidi(ReadOnlyTargetRules Target)
-    {
-        string RtMidiPath = Path.Combine(PluginDirectory, "ThirdParty", "RtMidi");
-        if (!Directory.Exists(RtMidiPath))
-        {
-            Log.TraceInformation("RtMidi not found at: " + RtMidiPath);
-            return false;
-        }
-
-        string LibPath = "";
-        string IncludePath = Path.Combine(RtMidiPath, "include");
-
-        PublicIncludePaths.Add(IncludePath);
-
-        if (Target.Platform == UnrealTargetPlatform.Win64)
-        {
-            LibPath = Path.Combine(RtMidiPath, "lib", "Win64");
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "rtmidi.lib")); 
-        }
-        else if (Target.Platform == UnrealTargetPlatform.Linux)
-        {
-            LibPath = Path.Combine(RtMidiPath, "lib", "Linux");
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "librtmidi.so"));
-        }
-        else if (Target.Platform == UnrealTargetPlatform.Mac)
-        {
-            LibPath = Path.Combine(RtMidiPath, "lib", "Mac");
-            PublicAdditionalLibraries.Add(Path.Combine(LibPath, "librtmidi.dylib"));
-        }
-        return true;
-    }
-    */
 }

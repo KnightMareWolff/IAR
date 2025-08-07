@@ -1,14 +1,10 @@
-﻿//
-// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
-// Creation Date: Mon Feb 16 12:26:32 PST 2015 Adapted from binasc program.
-// Last Modified: Sat Apr 21 10:52:19 PDT 2018 Removed using namespace std;
-// Filename:      midifile/src/Binasc.cpp
-// Syntax:        C++11
-// vim:           ts=3 noexpandtab
-//
-// description:   Interface to convert bytes between binary and ASCII forms.
-//
-
+﻿// -------------------------------------------------------------------------------
+// Copyright 2025 William Wolff. All Rights Reserved.
+// This code is property of William Wolff and protected by copywright law.
+// Proibited copy or distribution without expressed authorization of the Author.
+// Creation: 05/08/2025
+// Author  : William Wolff
+// -------------------------------------------------------------------------------
 #include "Binasc.h"
 
 #include <cstdlib>

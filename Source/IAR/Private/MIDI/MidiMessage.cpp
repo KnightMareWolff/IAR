@@ -1,16 +1,10 @@
-﻿//
-// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
-// Creation Date: Sat Feb 14 20:49:21 PST 2015
-// Last Modified: Sun Apr 15 11:11:05 PDT 2018 Added event removal system.
-// Filename:      midifile/src/MidiMessage.cpp
-// Website:       http://midifile.sapp.org
-// Syntax:        C++11
-// vim:           ts=3 noexpandtab
-//
-// Description:   Storage for bytes of a MIDI message for Standard
-//                MIDI Files.
-//
-
+﻿// -------------------------------------------------------------------------------
+// Copyright 2025 William Wolff. All Rights Reserved.
+// This code is property of William Wolff and protected by copywright law.
+// Proibited copy or distribution without expressed authorization of the Author.
+// Creation: 05/08/2025
+// Author  : William Wolff
+// -------------------------------------------------------------------------------
 #include "MidiMessage.h"
 
 #include <cmath>

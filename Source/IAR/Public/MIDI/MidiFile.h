@@ -1,16 +1,10 @@
-﻿//
-// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
-// Creation Date: Fri Nov 26 14:12:01 PST 1999
-// Last Modified: Mon Jan 18 20:54:04 PST 2021 Added readSmf().
-// Filename:      midifile/include/MidiFile.h
-// Website:       http://midifile.sapp.org
-// Syntax:        C++11
-// vim:           ts=3 noexpandtab
-//
-// Description:   A class that can read/write Standard MIDI files.
-//                MIDI data is stored by track in an array.
-//
-
+﻿// -------------------------------------------------------------------------------
+// Copyright 2025 William Wolff. All Rights Reserved.
+// This code is property of William Wolff and protected by copywright law.
+// Proibited copy or distribution without expressed authorization of the Author.
+// Creation: 05/08/2025
+// Author  : William Wolff
+// -------------------------------------------------------------------------------
 #ifndef _MIDIFILE_H_INCLUDED
 #define _MIDIFILE_H_INCLUDED
 

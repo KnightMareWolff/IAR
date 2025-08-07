@@ -1,29 +1,35 @@
 {
-	"FileVersion": 3,
-	"Version": 1,
-	"VersionName": "1.0",
-	"FriendlyName": "Insane Audio Recorder (IAR)",
-	"Description": "Plugin for real-time audio recording, processing, and analysis for Unreal Engine.",
-	"Category": "Audio",
-	"CreatedBy": "Williäm Wolff",
-	"CreatedByURL": "http://insaneframework.com",
-	"DocsURL": "http://insaneframework.com",
-	"MarketplaceURL": "",
-	"SupportURL": "http://insaneframework.com",
-	"EngineVersion": "5.6.0",
-	"CanContainContent": true,
-	"Installed": true,
-	"Modules": [
-		{
-			"Name": "IAR",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	],
-	"Plugins": [
-		{
-			"Name": "MIDIDevice",
-			"Enabled": true
-		}
-	]
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Insane Audio Recorder (IAR)",
+  "Description": "Plugin for real-time audio recording, processing, and analysis for Unreal Engine.",
+  "Category": "Audio",
+  "CreatedBy": "Williäm Wolff",
+  "CreatedByURL": "http://insaneframework.com",
+  "DocsURL": "http://insaneframework.com",
+  "MarketplaceURL": "com.epicgames.launcher://ue/Fab/product/c94a9ff4-1244-41f8-8295-7392d5144368",
+  "SupportURL": "http://insaneframework.com",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "IsExperimentalVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "IAR",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "PlatformAllowList": [
+        "Win64",
+        "Mac",
+        "Linux"
+      ]
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "MIDIDevice",
+      "Enabled": true
+    }
+  ]
 }

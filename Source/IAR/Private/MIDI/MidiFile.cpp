@@ -1,17 +1,10 @@
-﻿//
-// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
-// Creation Date: Fri Nov 26 14:12:01 PST 1999
-// Last Modified: Thu Jun 24 18:35:30 PDT 2021 Added base64 encoding read/write
-// Filename:      midifile/src/MidiFile.cpp
-// Website:       http://midifile.sapp.org
-// Syntax:        C++11
-// vim:           ts=3 noexpandtab
-//
-// Description:   A class which can read/write Standard MIDI files.
-//                MIDI data is stored by track in an array.  This
-//                class is used for example in the MidiPerform class.
-//
-
+﻿// -------------------------------------------------------------------------------
+// Copyright 2025 William Wolff. All Rights Reserved.
+// This code is property of William Wolff and protected by copywright law.
+// Proibited copy or distribution without expressed authorization of the Author.
+// Creation: 05/08/2025
+// Author  : William Wolff
+// -------------------------------------------------------------------------------
 #include "MidiFile.h"
 #include "Binasc.h"
 
