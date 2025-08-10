@@ -23,3 +23,6 @@ Have you ever imagined your Unreal Engine projects having audio that reacts so i
 ### Compatibility:
 
 Unreal Engine 5.6+ (Windows, Linux, macOS)
+
+## More Info At:
+http://www.insaneframework.com/docs
